@@ -1,14 +1,14 @@
-G2i Trivia Game
+## G2i Trivia Game
 
-## Play Now
+### Play Now
 
 http://g2i-trivia.netlify.com
 
 ### Instructions
 
 - Clone the repo to your local machine
-- Once in the directory enter the command `yarn install` or `npm install`. This will install all the package dependencies needed to run the app.
-- Enter the command `yarn start` or `npm start` to launch the app, which will start on localhost:3000 momentarily.
+- Once in the directory enter the command `yarn install`. This will install all the package dependencies needed to run the app.
+- Enter the command `yarn start` to launch the app, which will start on localhost:3000 momentarily.
 
 ### Technologies used
 
