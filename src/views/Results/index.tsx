@@ -1,4 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
+import { withRouter } from "react-router-dom";
+import { RouteComponentProps } from "react-router";
 import * as MyTypes from "MyTypes";
 
 import { connect } from "react-redux";
@@ -23,12 +25,22 @@ interface ApiData {
   type: string;
 }
 
-interface IResultProps {
+interface IResultProps extends RouteComponentProps<any> {
   answeredQuestions: Answers[];
   questions: ApiData[];
 }
 
-const Results: FC<IResultProps> = ({ answeredQuestions, questions }) => {
+const Results: FC<IResultProps> = ({
+  answeredQuestions,
+  questions,
+  history
+}) => {
+  // If a user tries to access the results page without having gone through the game flow, a redirect to Home is made.
+  useEffect(() => {
+    if (!questions.length) {
+      history.push("/");
+    }
+  });
   // Goes through all questions, pulling out which ones were correct and storing them in a separate array
   const correctAnswers = questions.filter(
     (question, index) =>
@@ -37,8 +49,17 @@ const Results: FC<IResultProps> = ({ answeredQuestions, questions }) => {
   return (
     <section className="Results">
       <div className="container">
-        <Summary correctAnswers={correctAnswers} questions={questions} />
-        <Button color="blue" action="reset" text="Play Again" link="/play" />
+        {questions.length && (
+          <>
+            <Summary correctAnswers={correctAnswers} questions={questions} />
+            <Button
+              color="blue"
+              action="reset"
+              text="Play Again"
+              link="/play"
+            />
+          </>
+        )}
       </div>
     </section>
   );
@@ -51,4 +72,4 @@ const mapStateToProps = (state: MyTypes.ReducerState) => {
   };
 };
 
-export default connect(mapStateToProps)(Results);
+export default connect(mapStateToProps)(withRouter(Results));
