@@ -2,7 +2,7 @@ G2i Trivia Game
 
 ## Play Now
 
-[http://g2i-trivia.netlify.com]
+http://g2i-trivia.netlify.com
 
 ### Instructions
 
