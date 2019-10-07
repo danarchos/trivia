@@ -1,0 +1,23 @@
+@import "../../sass/vars"
+@import "../../sass/mixins"
+  
+.Summary
+  text-align: center
+  width: 60%
+  +small
+    width: 90%
+  &__answers
+    &-item
+      margin: 10px 0
+      display: flex
+      border-bottom: 1px solid $primary
+      
+  img
+    width: 30px
+    margin-right: 20px
+  p
+    font-size: $small-text
+    text-align: left
+    word-wrap: break-word
+    +small
+      width: 85%

@@ -1,0 +1,17 @@
+@import "./vars.sass"
+
+@mixin xsmall
+  @media only screen and (max-width: #{$xsmall})
+    @content
+@mixin small
+  @media only screen and (max-width: #{$small})
+    @content
+@mixin medium
+  @media only screen and (max-width: #{$medium})
+    @content
+@mixin large
+  @media only screen and (max-width: #{$large})
+    @content
+@mixin xlarge
+  @media only screen and (max-width: #{$xlarge})
+    @content
