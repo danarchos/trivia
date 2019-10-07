@@ -1,6 +1,6 @@
-#G2i Trivia Game
+## G2i Trivia Game
 
-## Play Now
+### Play Now
 
 http://g2i-trivia.netlify.com
 
