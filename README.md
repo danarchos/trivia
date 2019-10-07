@@ -1,4 +1,4 @@
-G2i Trivia Game
+#G2i Trivia Game
 
 ## Play Now
 
