@@ -15,7 +15,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "typesafe-actions": "^4.4.2",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "use-react-router": "^1.0.7"
   },
   "scripts": {
